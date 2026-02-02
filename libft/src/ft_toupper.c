@@ -6,11 +6,11 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/05 22:28:30 by cmauley           #+#    #+#             */
-/*   Updated: 2025/10/06 21:26:13 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/02 21:42:43 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 int	ft_toupper(int c)
 {

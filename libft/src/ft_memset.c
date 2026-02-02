@@ -6,11 +6,11 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 18:08:36 by cmauley           #+#    #+#             */
-/*   Updated: 2025/10/01 18:54:15 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/02 21:42:43 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

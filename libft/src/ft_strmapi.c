@@ -6,22 +6,13 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 16:20:13 by cmauley           #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2025/10/23 19:57:26 by cmauley          ###   ########.fr       */
-=======
-/*   Updated: 2025/10/14 22:31:06 by cmauley          ###   ########.fr       */
->>>>>>> 5163350 (final)
+/*   Updated: 2026/02/02 21:49:13 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
-<<<<<<< HEAD
-
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char)) //
-=======
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
->>>>>>> 5163350 (final)
 {
 	unsigned int	i;
 	char			*res;

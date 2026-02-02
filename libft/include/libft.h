@@ -6,7 +6,7 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 16:29:40 by cmauley           #+#    #+#             */
-/*   Updated: 2025/10/20 19:36:31 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/02 21:43:45 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stddef.h>
 
 /*libc*/
 void	*ft_memset(void *s, int c, size_t n);

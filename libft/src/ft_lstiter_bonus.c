@@ -6,11 +6,11 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 18:32:50 by cmauley           #+#    #+#             */
-/*   Updated: 2025/10/17 19:11:23 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/02 23:22:03 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
