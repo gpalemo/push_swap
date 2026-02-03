@@ -6,12 +6,45 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 15:02:38 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/02 23:33:53 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/03 19:27:23 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
+static int	is_number(char **str, int start);
+static int	is_duplicate(char **str, int start);
+static int	int_limit_check(char **str, int start);
+static int	is_one_number(char **str);
+
+/**
+ * @brief fonction de gestion d'erreurs qui appelle les autres fonctions pour
+ * les differentes erreurs possibles
+ *
+ * @param str
+ * @param start
+ * @return int
+ */
+int	is_error(char **str, int start)
+{
+	if (is_one_number(str) <= 1)
+		return (write_error());
+	if (is_number(str, start) == 1)
+		return (write_error());
+	if (int_limit_check(str, start) == 1)
+		return (write_error());
+	if (is_duplicate(str, start) == 1)
+		return (write_error());
+	return (0);
+}
+
+/**
+ * @brief verifie si il y a bien uniquement des chiffres ou des nombres
+ *
+ * @param str
+ * @param start
+ * @return int
+ */
 static int	is_number(char **str, int start)
 {
 	int	i;
@@ -38,6 +71,13 @@ static int	is_number(char **str, int start)
 	return (0);
 }
 
+/**
+ * @brief verifie qu'il n'y a pas de doublons
+ *
+ * @param str
+ * @param start
+ * @return int
+ */
 static int	is_duplicate(char **str, int start)
 {
 	int	k;
@@ -62,6 +102,13 @@ static int	is_duplicate(char **str, int start)
 	return (0);
 }
 
+/**
+ * @brief verifie qu'on ne depasse pas int min et int max
+ *
+ * @param str
+ * @param start
+ * @return int
+ */
 static int	int_limit_check(char **str, int start)
 {
 	long	nbr;
@@ -78,24 +125,17 @@ static int	int_limit_check(char **str, int start)
 	return (0);
 }
 
-int	is_one_number(char **str)
+/**
+ * @brief verifie si il n'y a qu'un chiffre ou un nombre (pas besoin de trier)
+ *
+ * @param str
+ * @return int
+ */
+static int	is_one_number(char **str)
 {
 	int	j;
 
 	while (str[j])
 		j++;
 	return (j);
-}
-
-int	is_error(char **str, int start)
-{
-	if (is_one_number(str) <= 1)
-		return (write_error());
-	if (is_number(str, start) == 1)
-		return (write_error());
-	if (int_limit_check(str, start) == 1) // avant is_duplicate pour eviter confusion atoi de >intmax et <intmin
-		return (write_error());
-	if (is_duplicate(str, start) == 1)
-		return (write_error());
-	return (0);
 }

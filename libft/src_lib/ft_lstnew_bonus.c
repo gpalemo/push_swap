@@ -1,39 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/16 22:57:10 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/02 23:21:45 by cmauley          ###   ########.fr       */
+/*   Created: 2025/10/16 21:31:30 by cmauley           #+#    #+#             */
+/*   Updated: 2026/02/03 18:43:40 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+t_list	*ft_lstnew(void *content)
 {
-	t_list	*last;
+	t_list	*tmp;
 
-	if (!lst || !new)
-		return ;
-	if (*lst == NULL)
-	{
-		*lst = new;
-		return ;
-	}
-	last = ft_lstlast(*lst);
-	last->next = new;
+	tmp = malloc(sizeof(t_list));
+	if (!tmp)
+		return (NULL);
+	tmp->content = content;
+	tmp->next = NULL;
+	return (tmp);
 }
-/*int	main()
-{
-	t_list	*a = ft_lstnew("hello");
-	t_list	*b = ft_lstnew("world");
-	t_list	*c = ft_lstnew("42");
-
-	a->next = b;
-	ft_lstadd_back(&a, c);
-	printf("%s\n",(char *)a->next->next->content);
-	return(0);
-}*/

@@ -6,11 +6,11 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 17:26:57 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/02 23:29:57 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/03 18:00:08 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/push_swap.h"
+#include "../include/push_swap.h"
 
 void	write_swap(char stack)
 {

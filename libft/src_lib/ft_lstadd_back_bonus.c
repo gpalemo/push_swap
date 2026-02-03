@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/02 16:32:20 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/02 23:26:15 by cmauley          ###   ########.fr       */
+/*   Created: 2025/10/16 22:57:10 by cmauley           #+#    #+#             */
+/*   Updated: 2026/02/03 17:53:17 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/push_swap.h"
+#include "../include/libft.h"
 
-int	main(int ac, char **av)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	char	**str;
+	t_list	*last;
 
-	str = NULL;
-	if (ac == 2)
+	if (!lst || !new)
+		return ;
+	if (*lst == NULL)
 	{
-		str = ft_split(av[1], ' ');
-		if (is_error(str, 0) == 1)
-			return (1);
+		*lst = new;
+		return ;
 	}
-	else if (ac > 2)
-	{
-		if (is_error(av, 1) == 1)
-			return (1);
-	}
-	// push_swap
+	last = ft_lstlast(*lst);
+	last->next = new;
 }

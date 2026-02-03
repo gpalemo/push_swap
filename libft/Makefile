@@ -6,12 +6,12 @@
 #    By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/08 18:13:41 by cmauley           #+#    #+#              #
-#    Updated: 2026/02/02 21:40:53 by cmauley          ###   ########.fr        #
+#    Updated: 2026/02/03 17:51:53 by cmauley          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Dossiers #
-SRC_DIR		=		src/
+SRC_DIR		=		src_lib/
 OBJ_DIR		=		obj/
 
 # fichiers source .c de la lib #
