@@ -6,7 +6,7 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 15:02:38 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/03 19:27:23 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/05 18:13:01 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,6 @@ static int	is_one_number(char **str);
 /**
  * @brief fonction de gestion d'erreurs qui appelle les autres fonctions pour
  * les differentes erreurs possibles
- *
- * @param str
- * @param start
- * @return int
  */
 int	is_error(char **str, int start)
 {
@@ -40,10 +36,6 @@ int	is_error(char **str, int start)
 
 /**
  * @brief verifie si il y a bien uniquement des chiffres ou des nombres
- *
- * @param str
- * @param start
- * @return int
  */
 static int	is_number(char **str, int start)
 {
@@ -73,10 +65,6 @@ static int	is_number(char **str, int start)
 
 /**
  * @brief verifie qu'il n'y a pas de doublons
- *
- * @param str
- * @param start
- * @return int
  */
 static int	is_duplicate(char **str, int start)
 {
@@ -104,10 +92,6 @@ static int	is_duplicate(char **str, int start)
 
 /**
  * @brief verifie qu'on ne depasse pas int min et int max
- *
- * @param str
- * @param start
- * @return int
  */
 static int	int_limit_check(char **str, int start)
 {
@@ -127,9 +111,6 @@ static int	int_limit_check(char **str, int start)
 
 /**
  * @brief verifie si il n'y a qu'un chiffre ou un nombre (pas besoin de trier)
- *
- * @param str
- * @return int
  */
 static int	is_one_number(char **str)
 {

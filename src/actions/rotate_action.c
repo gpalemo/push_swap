@@ -6,14 +6,14 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 22:56:23 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/03 17:59:53 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/05 18:16:22 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-static void	rotate(t_node **head, char stack);
-static void	rev_rotate(t_node **head, char stack);
+void	rotate(t_node **head, char stack);
+void	rev_rotate(t_node **head, char stack);
 
 void	rr(t_node **head_a, t_node **head_b)
 {
@@ -30,12 +30,10 @@ void	rrr(t_node **head_a, t_node **head_b)
 }
 
 /**
- * @brief rotate : décaler tous les int d'une stack vers le haut, en passant alors le premier en dernier (si A: ra; si B: rb; si les deux: rr).
- *
- * @param head
- * @param stack
+ * @brief rotate : décaler tous les int d'une stack vers le haut, en passant alors le premier 
+ * en dernier (si A: ra; si B: rb; si les deux: rr).
  */
-static void	rotate(t_node **head, char stack)
+void	rotate(t_node **head, char stack)
 {
 	t_node	*top_cpy;
 	t_node	*current;
@@ -54,12 +52,10 @@ static void	rotate(t_node **head, char stack)
 }
 
 /**
- * @brief reverse rotate : décaler tous les int d'une stack vers le bas, en passant alors le dernier en premier (si A: rra; si B: rrb; si les deux: rrr).
- *
- * @param head
- * @param stack
+ * @brief reverse rotate : décaler tous les int d'une stack vers le bas, 
+ * en passant alors le dernier en premier (si A: rra; si B: rrb; si les deux: rrr).
  */
-static void	rev_rotate(t_node **head, char stack)
+void	rev_rotate(t_node **head, char stack)
 {
 	t_node		*top;
 	t_node		*bottom;
