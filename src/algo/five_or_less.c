@@ -6,39 +6,16 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 19:34:50 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/08 21:20:14 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/08 22:23:50 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-static void	sort_two(t_node	*stack_a);
-static void	sort_three(t_node *stack_a);
-// si taille <= 1 -> return
-// si taille == 2 -> sort_two(stack_a)
-// si taille == 3 -> sort_three(stack_a)
-// si taille == 4 -> push_min_to_b(stack_a, stack_b, 1), sort_three(stack_a), push_back_from_b(stack_a, stack_b)
-// si taille == 5 -> push_min_to_b(stack_a, stack_b, 2), sort_three(stack_a), push_back_from_b(stack_a, stack_b)
+static int	get_index_min(t_node *stack);
+static void	push_min_to_b(t_node **stack_a, t_node **stack_b);
 
-void	sort_small_stack(t_node **stack_a, t_node **stack_b)
-{
-	if (how_many_int(stack_a) <= 1)
-		return ;
-	if (how_many_int(stack_a) == 2)
-		sort_two(stack_a);
-	if (how_many_int(stack_a) == 3)
-		sort_three(stack_a);
-	
-}
-static void	sort_two(t_node	*stack_a)
-{
-	if (stack_a->data > stack_a->next->data)
-	{
-		swap(&stack_a, 'a');
-	}
-}
-
-static void	sort_three(t_node *stack_a)
+void	sort_three(t_node *stack_a)
 {
 	int	first = stack_a->data;
 	int	second = stack_a->next->data;
@@ -62,4 +39,73 @@ static void	sort_three(t_node *stack_a)
 	}
 }
 
-static void	push_min_to_b(t_node *stack_a, t_node *stack_b, int )
+void	sort_four(t_node **stack_a, t_node **stack_b)
+{
+	push_min_to_b(stack_a, stack_b);
+	sort_three(*stack_a);
+	pa(stack_b, stack_a);
+}
+
+void	sort_five(t_node **stack_a, t_node **stack_b)
+{
+	push_min_to_b(stack_a, stack_b);
+	push_min_to_b(stack_a, stack_b);
+	sort_three(*stack_a);
+	pa(stack_b, stack_a);
+	pa(stack_b, stack_a);
+}
+
+static void	push_min_to_b(t_node **stack_a, t_node **stack_b)
+{
+	int	index;
+	int	size;
+	int	i;
+
+	index = get_index_min(*stack_a);
+	size = how_many_int(*stack_a);
+	if (index <= size / 2)
+	{
+		i = index;
+		while (i > 0)
+		{
+			rotate(stack_a, 'a');
+			i--;
+		}
+	}
+	else
+	{
+		i = size - index;
+		while (i > 0)
+		{
+			rev_rotate(stack_a, 'a');
+			i--;
+		}
+	}
+	pb(stack_a, stack_b);
+}
+
+static int	get_index_min(t_node *stack)
+{
+	t_node *tmp;
+	int	min;
+	int	min_index;
+	int	i;
+
+	if (stack == NULL)
+		return (-1);
+	tmp = stack;
+	min = tmp->data;
+	min_index = 0;
+	i = 0;
+	while (tmp)
+	{
+		if (tmp->data < min)
+		{
+			min = tmp->data;
+			min_index = i;
+		}
+		tmp = tmp->next;
+		i++;
+	}
+	return (min_index);
+}
