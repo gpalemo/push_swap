@@ -6,7 +6,7 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 16:01:23 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/05 18:01:28 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/08 00:34:49 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,9 @@ void	write_rotate(char stack);
 void	write_rev_rotate(char stack);
 int		write_error(void);
 // ========== ALGORITHM ==========
-
+int	how_many_int(t_node *stack);
+int	is_a_sorted(t_node *stack_a);
+int	sort(t_node *stack_a, t_node *stack_b);
 // parsing
 int	is_error(char **str, int start);
 // free

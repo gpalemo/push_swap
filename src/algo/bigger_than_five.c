@@ -1,40 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free.c                                             :+:      :+:    :+:   */
+/*   bigger_than_five.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/03 19:16:47 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/08 00:21:44 by cmauley          ###   ########.fr       */
+/*   Created: 2026/02/08 00:52:44 by cmauley           #+#    #+#             */
+/*   Updated: 2026/02/08 01:38:28 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	free_list(t_node *list)
+int	sort_big_stack(t_node *stack_a, t_node *stack_b)
 {
-	t_node	*copy;
-	t_node	*current;
-
-	copy = list;
-	while (copy != NULL)
-	{
-		current = copy->next;
-		free(copy);
-		copy = current;
-	}
-}
-
-void	free_tab(char **str)
-{
-	int j;
 	
-	j = 0;
-	while (str[j])
-	{
-		free(str[j]);
-		j++;
-	}
-	free(str);
 }

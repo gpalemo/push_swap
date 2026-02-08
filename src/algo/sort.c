@@ -1,40 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free.c                                             :+:      :+:    :+:   */
+/*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/03 19:16:47 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/08 00:21:44 by cmauley          ###   ########.fr       */
+/*   Created: 2026/02/07 23:52:52 by cmauley           #+#    #+#             */
+/*   Updated: 2026/02/08 00:52:18 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	free_list(t_node *list)
+int	sort(t_node *stack_a, t_node *stack_b)
 {
-	t_node	*copy;
-	t_node	*current;
-
-	copy = list;
-	while (copy != NULL)
-	{
-		current = copy->next;
-		free(copy);
-		copy = current;
-	}
-}
-
-void	free_tab(char **str)
-{
-	int j;
-	
-	j = 0;
-	while (str[j])
-	{
-		free(str[j]);
-		j++;
-	}
-	free(str);
+	if (a_is_sorted(stack_a) == 0)
+		return (1);
+	if (how_many_int(stack_a) <= 5)
+		sort_small_stack(stack_a, stack_b);
+	if (how_many_int(stack_a) > 5)
+		sort_big_stack(stack_a, stack_b);
 }

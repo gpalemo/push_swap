@@ -6,7 +6,7 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 16:32:20 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/05 18:15:04 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/08 00:19:55 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ int	main(int ac, char **av)
 		str = ft_split(av[1], ' ');
 		if (is_error(str, 0) == 1)
 		{
-			//free tab
+			free_tab(str);
 			return (1);
 		}
 		create_and_sort(str, 0);
-		//free tab
+		free_tab(str);
 	}
 	else if (ac > 2)
 	{
@@ -89,6 +89,6 @@ static void	create_and_sort(char **tab, int start)
 	
 	stack_a = make_list(tab, start);
 	stack_b = NULL;
-	//sort
+	sort(stack_a, stack_b);
 	free_list(stack_a);
 }

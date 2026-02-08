@@ -1,40 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free.c                                             :+:      :+:    :+:   */
+/*   is_a_sorted.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/03 19:16:47 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/08 00:21:44 by cmauley          ###   ########.fr       */
+/*   Created: 2026/02/07 23:43:04 by cmauley           #+#    #+#             */
+/*   Updated: 2026/02/08 00:24:37 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	free_list(t_node *list)
+int	is_a_sorted(t_node *stack_a)
 {
-	t_node	*copy;
-	t_node	*current;
-
-	copy = list;
-	while (copy != NULL)
+	while (stack_a->next != NULL)
 	{
-		current = copy->next;
-		free(copy);
-		copy = current;
+		if (stack_a->data < stack_a->next->data)
+			stack_a = stack_a->next;
+		else
+			return (1);
 	}
-}
-
-void	free_tab(char **str)
-{
-	int j;
-	
-	j = 0;
-	while (str[j])
-	{
-		free(str[j]);
-		j++;
-	}
-	free(str);
+	return (0);
 }
