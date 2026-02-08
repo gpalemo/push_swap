@@ -6,7 +6,7 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 16:32:20 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/08 00:19:55 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/08 19:37:17 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 static t_node	*make_list(char **av, int start);
 static void		create_and_sort(char **tab, int start);
+static int		check_split(char **str);
 
 int	main(int ac, char **av)
 {
@@ -23,6 +24,8 @@ int	main(int ac, char **av)
 	if (ac == 2)
 	{
 		str = ft_split(av[1], ' ');
+		if (check_split(str))
+			return (1);
 		if (is_error(str, 0) == 1)
 		{
 			free_tab(str);
@@ -91,4 +94,15 @@ static void	create_and_sort(char **tab, int start)
 	stack_b = NULL;
 	sort(stack_a, stack_b);
 	free_list(stack_a);
+}
+
+static int	check_split(char **str)
+{
+	if (!str || !str[0])
+	{
+		write(2, "Error\n", 6);
+		free_tab(str);
+		return (1);
+	}
+	return (0);
 }

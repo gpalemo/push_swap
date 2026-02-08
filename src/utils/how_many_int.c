@@ -6,7 +6,7 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 00:29:55 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/08 00:46:13 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/08 18:55:10 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	how_many_int(t_node *stack)
 {
 	int i;
 
-	if (stack == NULL)
+	if (stack == NULL || stack == 1)
 		return (0);
 	i = 1;
 	while (stack->next != NULL)

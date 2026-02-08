@@ -6,7 +6,7 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 15:02:38 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/05 18:13:01 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/08 19:41:36 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 static int	is_number(char **str, int start);
 static int	is_duplicate(char **str, int start);
 static int	int_limit_check(char **str, int start);
-static int	is_one_number(char **str);
 
 /**
  * @brief fonction de gestion d'erreurs qui appelle les autres fonctions pour
@@ -23,8 +22,6 @@ static int	is_one_number(char **str);
  */
 int	is_error(char **str, int start)
 {
-	if (is_one_number(str) <= 1)
-		return (write_error());
 	if (is_number(str, start) == 1)
 		return (write_error());
 	if (int_limit_check(str, start) == 1)
@@ -45,6 +42,8 @@ static int	is_number(char **str, int start)
 	i = 0;
 	j = start;
 	if (!str[j])
+		return (1);
+	if (str[j][0] == '\0')
 		return (1);
 	while (str[j])
 	{
@@ -102,21 +101,9 @@ static int	int_limit_check(char **str, int start)
 	while (str[j])
 	{
 		nbr = ft_atoi(str[j]);
-		if (str[j] < -2147483648 || str[j] > 2147483647)
+		if (nbr < -2147483648L || nbr > 2147483647L)
 			return (1);
 		j++;
 	}
 	return (0);
-}
-
-/**
- * @brief verifie si il n'y a qu'un chiffre ou un nombre (pas besoin de trier)
- */
-static int	is_one_number(char **str)
-{
-	int	j;
-
-	while (str[j])
-		j++;
-	return (j);
 }

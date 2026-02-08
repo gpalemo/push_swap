@@ -6,7 +6,7 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 20:32:37 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/02 21:42:43 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/08 19:29:24 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,17 +84,3 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (str);
 }
-/*int	main()
-{
-	char	**tab;
-	int		i;
-
-	tab = ft_split("caca pipi caca  ", ' ');
-	i = 0;
-	while (tab[i])
-	{
-		printf("str = %d : %s\n", i, tab[i]);
-		i++;
-	}
-	return (0);
-}*/
