@@ -6,14 +6,14 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 19:34:50 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/08 22:23:50 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/10 15:59:50 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-static int	get_index_min(t_node *stack);
-static void	push_min_to_b(t_node **stack_a, t_node **stack_b);
+int		get_index_min(t_node *stack);
+void	push_min_to_b(t_node **stack_a, t_node **stack_b);
 
 void	sort_three(t_node *stack_a)
 {
@@ -55,7 +55,7 @@ void	sort_five(t_node **stack_a, t_node **stack_b)
 	pa(stack_b, stack_a);
 }
 
-static void	push_min_to_b(t_node **stack_a, t_node **stack_b)
+void	push_min_to_b(t_node **stack_a, t_node **stack_b)
 {
 	int	index;
 	int	size;
@@ -84,12 +84,12 @@ static void	push_min_to_b(t_node **stack_a, t_node **stack_b)
 	pb(stack_a, stack_b);
 }
 
-static int	get_index_min(t_node *stack)
+int	get_index_min(t_node *stack)
 {
-	t_node *tmp;
-	int	min;
-	int	min_index;
-	int	i;
+	t_node	*tmp;
+	int		min;
+	int		min_index;
+	int		i;
 
 	if (stack == NULL)
 		return (-1);

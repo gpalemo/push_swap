@@ -6,7 +6,7 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 19:16:47 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/08 00:21:44 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/10 15:49:17 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ void	free_list(t_node *list)
 
 void	free_tab(char **str)
 {
-	int j;
-	
+	int	j;
+
 	j = 0;
 	while (str[j])
 	{
