@@ -6,7 +6,7 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 19:34:50 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/10 19:48:14 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/15 20:10:17 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	sort_four(t_node **stack_a, t_node **stack_b)
 {
 	push_min_to_b(stack_a, stack_b);
 	sort_three(*stack_a);
-	pa(stack_b, stack_a);
+	pa(stack_a, stack_b);
 }
 
 void	sort_five(t_node **stack_a, t_node **stack_b)
@@ -51,8 +51,8 @@ void	sort_five(t_node **stack_a, t_node **stack_b)
 	push_min_to_b(stack_a, stack_b);
 	push_min_to_b(stack_a, stack_b);
 	sort_three(*stack_a);
-	pa(stack_b, stack_a);
-	pa(stack_b, stack_a);
+	pa(stack_a, stack_b);
+	pa(stack_a, stack_b);
 }
 
 void	push_min_to_b(t_node **stack_a, t_node **stack_b)
