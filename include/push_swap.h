@@ -6,13 +6,13 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 16:01:23 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/15 19:55:59 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/16 18:57:36 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-# include "../libft/include_lib/libft.h"
+# include "../libft/include/libft.h"
 
 # include <stdio.h>
 # include <unistd.h>
@@ -44,15 +44,16 @@ void	write_rev_rotate(char stack);
 int		write_error(void);
 // ========== ALGORITHM ==========
 int		how_many_int(t_node *stack);
-int		sort(t_node *stack_a, t_node *stack_b);
+int		sort(t_node **stack_a, t_node **stack_b);
 // five or less
 void	push_min_to_b(t_node **stack_a, t_node **stack_b);
 int		get_index_min(t_node *stack);
-void	sort_three(t_node *stack_a);
+void	sort_three(t_node **stack_a);
 void	sort_four(t_node **stack_a, t_node **stack_b);
 void	sort_five(t_node **stack_a, t_node **stack_b);
 // radix sort
 int	index_stack(t_node *stack_a);
+int	radix_sort(t_node **stack_a, t_node **stack_b);
 // parsing
 int		is_error(char **str, int start);
 int		is_a_sorted(t_node *stack_a);

@@ -6,7 +6,7 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 16:32:20 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/08 19:37:17 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/16 19:02:22 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,13 +62,16 @@ static t_node	*make_list(char **tab, int start)
 		return (NULL);
 	head->data = ft_atoi(tab[start]);
 	head->next = NULL;
-	j = start + 1;
 	current = head;
+	j = start + 1;
 	while (tab[j])
 	{
 		current->next = malloc(sizeof(t_node));
 		if (!current->next)
+		{
+			free_list(head);
 			return (NULL);
+		}
 		current = current->next;
 		current->data = ft_atoi(tab[j]);
 		j++;
@@ -91,9 +94,12 @@ static void	create_and_sort(char **tab, int start)
 	t_node	*stack_b;
 	
 	stack_a = make_list(tab, start);
+	if (!stack_a)
+		return ;
 	stack_b = NULL;
-	sort(stack_a, stack_b);
+	sort(&stack_a, &stack_b);
 	free_list(stack_a);
+	free_list(stack_b);
 }
 
 static int	check_split(char **str)

@@ -6,11 +6,13 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 00:52:44 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/15 21:14:31 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/16 17:47:25 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+static int	get_max_bits(int size);
 
 int	radix_sort(t_node **stack_a, t_node **stack_b)
 {
