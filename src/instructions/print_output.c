@@ -6,7 +6,7 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 17:26:57 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/08 20:39:12 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/16 19:50:32 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ void	write_rotate(char stack)
 void	write_rev_rotate(char stack)
 {
 	if (stack == 'a')
-		write(1, "rra\n", 3);
+		write(1, "rra\n", 4);
 	else if (stack == 'b')
-		write(1, "rrb\n", 3);
+		write(1, "rrb\n", 4);
 }
 
 int	write_error(void)
