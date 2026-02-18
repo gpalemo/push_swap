@@ -6,7 +6,7 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 00:52:44 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/16 21:48:30 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/18 14:13:33 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ static int	get_max_bits(int size);
 
 int	radix_sort(t_node **stack_a, t_node **stack_b)
 {
-	int size;
-	int max_bits;
-	int i;
-	int j;
+	int	size;
+	int	max_bits;
+	int	i;
+	int	j;
 
 	index_stack(*stack_a);
 	size = how_many_int(*stack_a);
@@ -44,12 +44,12 @@ int	radix_sort(t_node **stack_a, t_node **stack_b)
 }
 
 /**
- * @brief donne le nombre de radix a effectuer selon 
+ * @brief donne le nombre de radix a effectuer selon
  * le nombre de decalage à droite
  */
 static int	get_max_bits(int size)
 {
-	int max;
+	int	max;
 	int	bits;
 
 	max = size - 1;

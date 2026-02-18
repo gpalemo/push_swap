@@ -6,7 +6,7 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 16:35:08 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/05 15:39:54 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/18 14:13:59 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ void	pb(t_node **head_a, t_node **head_b)
 }
 
 /**
- * @brief push : déplacer le premier int d'une stack au sommet de l'autre (si déplace sur A: pa; si déplace sur B; pb).
+ * @brief push : déplacer le premier int d'une stack au sommet de
+ * sl'autre (si déplace sur A: pa; si déplace sur B; pb).
  *
  * @param src stack 1
  * @param dst stack 2

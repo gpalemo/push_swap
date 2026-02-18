@@ -6,7 +6,7 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 16:01:23 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/16 18:57:36 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/18 14:17:00 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,8 @@ void	sort_three(t_node **stack_a);
 void	sort_four(t_node **stack_a, t_node **stack_b);
 void	sort_five(t_node **stack_a, t_node **stack_b);
 // radix sort
-int	index_stack(t_node *stack_a);
-int	radix_sort(t_node **stack_a, t_node **stack_b);
+int		index_stack(t_node *stack_a);
+int		radix_sort(t_node **stack_a, t_node **stack_b);
 // parsing
 int		is_error(char **str, int start);
 int		is_a_sorted(t_node *stack_a);

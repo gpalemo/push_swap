@@ -6,7 +6,7 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 16:41:55 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/05 15:39:25 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/18 14:16:15 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 void	swap(t_node **head, char stack);
 
 /**
- * @brief swap : échanger les deux premiers int d'une stack (si A: sa; si B: sb; si les deux: ss).
+ * @brief swap : échanger les deux premiers int
+ * d'une stack (si A: sa; si B: sb; si les deux: ss).
  *
  * @param head_a
  * @param head_b

@@ -6,7 +6,7 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 16:32:20 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/16 19:02:22 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/18 14:12:16 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ static t_node	*make_list(char **tab, int start)
 }
 
 /**
- * @brief fonction qui crée la stack a (liste d'int) et stack b (liste vide), 
+ * @brief fonction qui crée la stack a (liste d'int) et stack b (liste vide),
  * les trie et free stack a
  *
  * @param tab soit av, soit str
@@ -92,7 +92,7 @@ static void	create_and_sort(char **tab, int start)
 {
 	t_node	*stack_a;
 	t_node	*stack_b;
-	
+
 	stack_a = make_list(tab, start);
 	if (!stack_a)
 		return ;

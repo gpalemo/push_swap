@@ -6,7 +6,7 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/15 18:19:40 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/15 19:18:11 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/18 14:13:02 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,9 +74,9 @@ static int	*stack_to_array(t_node *stack_a, int size)
  */
 static void	sort_array(int *tab, int size)
 {
-	int i;
-	int j;
-	int tmp;
+	int	i;
+	int	j;
+	int	tmp;
 
 	if (!tab || size <= 1)
 		return ;

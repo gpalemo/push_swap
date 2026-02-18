@@ -6,7 +6,7 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 22:56:23 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/05 18:16:22 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/18 14:16:01 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ void	rrr(t_node **head_a, t_node **head_b)
 }
 
 /**
- * @brief rotate : décaler tous les int d'une stack vers le haut, en passant alors le premier 
+ * @brief rotate : décaler tous les int d'une stack vers
+ * le haut, en passant alors le premier
  * en dernier (si A: ra; si B: rb; si les deux: rr).
  */
 void	rotate(t_node **head, char stack)
@@ -52,8 +53,9 @@ void	rotate(t_node **head, char stack)
 }
 
 /**
- * @brief reverse rotate : décaler tous les int d'une stack vers le bas, 
- * en passant alors le dernier en premier (si A: rra; si B: rrb; si les deux: rrr).
+ * @brief reverse rotate : décaler tous les int d'une stack vers le bas,
+ * en passant alors le dernier en premier
+ * (si A: rra; si B: rrb; si les deux: rrr).
  */
 void	rev_rotate(t_node **head, char stack)
 {
