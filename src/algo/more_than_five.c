@@ -6,7 +6,7 @@
 /*   By: cmauley <cmauley@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 00:52:44 by cmauley           #+#    #+#             */
-/*   Updated: 2026/02/18 14:13:33 by cmauley          ###   ########.fr       */
+/*   Updated: 2026/02/18 17:17:54 by cmauley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 static int	get_max_bits(int size);
 
+/**
+ * @brief Trie la pile en utilisant le radix sort sur les index.
+* Pour chaque bit : les 0 sont push dans B, les 1 sont rotate dans A,
+* puis tout est renvoyé dans A.
+ */
 int	radix_sort(t_node **stack_a, t_node **stack_b)
 {
 	int	size;
